@@ -1,4 +1,4 @@
-// api/submit.js
+// api/submit.jS
 export default async function handler(req, res) {
   // Only accept POST requests
   if (req.method !== "POST") {
