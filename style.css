@@ -1,0 +1,235 @@
+/* ------------------ GLOBAL STYLES ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------ HERO SECTION ------------------ */
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1581579188871-45ea61f2a0b7?auto=format&fit=crop&w=1350&q=80") 
+             center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero * {
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.3rem;
+}
+
+.hero .btn {
+  margin-top: 20px;
+}
+
+/* ------------------ BUTTONS ------------------ */
+
+.btn {
+  display: inline-block;
+  background: #27ae60;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e8f4d;
+  transform: scale(1.05);
+}
+
+/* ------------------ SECTIONS ------------------ */
+
+section {
+  padding: 60px 10%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* ------------------ ABOUT ------------------ */
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* ------------------ SERVICES ------------------ */
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #27ae60;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.service-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ------------------ BOOKING FORM ------------------ */
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#total-price {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.success-message, .error-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  display: none;
+}
+
+.success-message {
+  color: #27ae60;
+}
+
+.error-message {
+  color: red;
+}
+
+/* ------------------ FAQ SECTION ------------------ */
+
+.faq-item {
+  background: white;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+
+footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+footer a {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
